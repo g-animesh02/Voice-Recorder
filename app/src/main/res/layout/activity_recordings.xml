@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/bgColor"
+    tools:context=".Recordings">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarRecording"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRecord"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBarRecording"
+        android:layout_marginTop="5dp" />
+
+    <RelativeLayout
+        android:id="@+id/recyclerError"
+        android:layout_below="@+id/toolBarRecording"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/error" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageError"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-40dp"
+            android:text="Files not found!!"
+            android:textColor="?attr/textColor"
+            android:textSize="25sp" />
+    </RelativeLayout>
+</RelativeLayout>

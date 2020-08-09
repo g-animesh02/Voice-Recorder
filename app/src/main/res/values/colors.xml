@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="red">#FF0000</color>
+
+    <color name="wave_start_dark">#AA8FDA</color>
+    <color name="closing_wave_dark">#D63C72</color>
+    <color name="textColor">#000000</color>
+    <color name="toolbarSettings">#F83737</color>
+    <color name="wave_start_light">#8457D5</color>
+    <color name="closing_wave_light">#53EFEF</color>
+
+</resources>

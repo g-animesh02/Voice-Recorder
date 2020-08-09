@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeMain"
+    android:background="?attr/bgColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.scwang.wave.MultiWaveHeader
+        android:id="@+id/multiWave_header"
+        android:layout_width="match_parent"
+        android:visibility="invisible"
+        android:layout_height="100dp" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarMain"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearFloating"
+        android:layout_below="@+id/toolBarMain">
+
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/circle"
+            android:textColor="?attr/textColor"
+            android:gravity="center"
+            android:textSize="30sp" />
+    </RelativeLayout>
+    <com.scwang.wave.MultiWaveHeader
+        android:id="@+id/multiWave_footer"
+        android:layout_width="match_parent"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:scaleY="-1"
+        android:scaleX="-1"
+        android:layout_height="100dp" />
+    <LinearLayout
+        android:id="@+id/linearFloating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingPlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:elevation="2.5dp"
+            android:src="@drawable/play" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:elevation="2.5dp"
+            android:src="@drawable/ic_menu"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

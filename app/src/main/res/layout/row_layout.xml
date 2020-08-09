@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_layouts"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="?attr/bgColor"
+    android:orientation="vertical">
+
+    <com.scwang.wave.MultiWaveHeader
+        android:id="@+id/row_wave"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleY="-1"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toStartOf="@+id/deleteFileLinear">
+
+        <ImageView
+            android:id="@+id/playImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/ic_play" />
+
+        <TextView
+            android:id="@+id/recordingname"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/playImage"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="Recordings"
+            android:textColor="?attr/textColor"
+            android:textSize="15sp" />
+
+        <Chronometer
+            android:id="@+id/chronometerRec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+        <!--android:textColor="?attr/textColor"-->
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/deleteFileLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:background="@drawable/delete_selected"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="3dp">
+
+        <ImageView
+            android:id="@+id/deleteFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/ic_delete" />
+    </LinearLayout>
+
+</RelativeLayout>
